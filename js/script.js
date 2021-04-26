@@ -101,7 +101,7 @@ for (let i = 0; i < totalNavList; i++) {
     }
     this.classList.add('active');
     showSection(this);
-    if (window.innerHTML < 1200) {
+    if (window.innerWidth < 1200) {
       assideSctionTogglerBtn();
     }
   });
@@ -140,9 +140,8 @@ document.querySelector('.hire-me').addEventListener('click', function () {
 
 const navTogglerBtn = document.querySelector('.nav-toggler'),
   aside = document.querySelector('.aside');
-navTogglerBtn.addEventListener('click', () => {
-  assideSctionTogglerBtn();
-});
+navTogglerBtn.addEventListener('click', assideSctionTogglerBtn);
+
 function assideSctionTogglerBtn() {
   aside.classList.toggle('open');
   navTogglerBtn.classList.toggle('open');
