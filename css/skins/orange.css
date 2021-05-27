@@ -6,18 +6,19 @@
   border-bottom: 4px solid #fa5b0f;
   border-right: 4px solid #fa5b0f;
 }
-body.dark .portofolio .portofolio-filter button.active,
+body.dark .sertificates .sertificates-filter button.active,
 .contact .contact-info-item .icon .fa,
 .lightbox .lightbox-controls .prev-item .fa,
 .lightbox .lightbox-controls .next-item .fa,
-.portofolio .portofolio-item .portofolio-info .icon .fa,
-.portofolio .portofolio-filter button.active,
+.sertificates .sertificates-item .sertificates-info .icon .fa,
+.sertificates .sertificates-filter button.active,
 .service .service-item .service-item-inner .icon .fa,
 .about .about-content .about-text h3 span,
 body.dark .aside .nav li a:hover,
 body.dark .aside .nav li a.active,
 .aside .nav li a:hover,
-.aside .nav li a.active {
+.aside .nav li a.active,
+.portofolio .portofolio-item-inner .portofolio-info .portofolio-tags span {
   color: #fa5b0f;
 }
 .service .service-item .service-item-inner:hover .icon,
@@ -30,9 +31,10 @@ body.dark .aside .nav li a.active,
 .aside .nav-toggler span,
 .aside .nav-toggler span::before,
 .aside .nav-toggler span::after,
-.home .intro .social-link a {
+.home .intro .social-link a,
+.portofolio .portofolio-item-inner .portofolio-info .source-code a {
   background-color: #fa5b0f;
 }
-.portofolio .portofolio-filter button.active {
+.sertificates .sertificates-filter button.active {
   border-color: #fa5b0f;
 }

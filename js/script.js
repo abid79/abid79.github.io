@@ -5,12 +5,12 @@ window.addEventListener('load', function () {
   }, 1000);
 });
 
-const filterContainer = document.querySelector('.portofolio-filter'),
+const filterContainer = document.querySelector('.sertificates-filter'),
   filterBtns = filterContainer.children,
   totalFilterBtn = filterBtns.length,
-  portofolioItems = document.querySelectorAll('.portofolio-item '),
-  totalPortofolioItem = portofolioItems.length;
-// console.log(totalPortofolioItem);
+  sertificatesItems = document.querySelectorAll('.sertificates-item '),
+  totalsertificatesItem = sertificatesItems.length;
+// console.log(totalsertificatesItem);
 
 for (let i = 0; i < totalFilterBtn; i++) {
   filterBtns[i].addEventListener('click', function () {
@@ -18,17 +18,17 @@ for (let i = 0; i < totalFilterBtn; i++) {
     this.classList.add('active');
     const filterValue = this.getAttribute('data-filter');
     console.log(filterValue);
-    for (k = 0; k < totalPortofolioItem; k++) {
-      if (filterValue === portofolioItems[k].getAttribute('data-category')) {
-        portofolioItems[k].classList.add('show');
-        portofolioItems[k].classList.remove('hide');
+    for (k = 0; k < totalsertificatesItem; k++) {
+      if (filterValue === sertificatesItems[k].getAttribute('data-category')) {
+        sertificatesItems[k].classList.add('show');
+        sertificatesItems[k].classList.remove('hide');
       } else {
-        portofolioItems[k].classList.remove('show');
-        portofolioItems[k].classList.add('hide');
+        sertificatesItems[k].classList.remove('show');
+        sertificatesItems[k].classList.add('hide');
       }
       if (filterValue === 'all') {
-        portofolioItems[k].classList.add('show');
-        portofolioItems[k].classList.remove('hide');
+        sertificatesItems[k].classList.add('show');
+        sertificatesItems[k].classList.remove('hide');
       }
     }
   });
@@ -42,15 +42,15 @@ const lightbox = document.querySelector('.lightbox'),
   lightboxCounter = lightbox.querySelector('.caption-counter');
 let itemIndex = 0;
 
-for (let i = 0; i < totalPortofolioItem; i++) {
-  portofolioItems[i].addEventListener('click', function () {
+for (let i = 0; i < totalsertificatesItem; i++) {
+  sertificatesItems[i].addEventListener('click', function () {
     itemIndex = i;
     changeItem();
     toggleLightbox();
   });
 }
 function nextItem() {
-  if (itemIndex === totalPortofolioItem - 1) {
+  if (itemIndex === totalsertificatesItem - 1) {
     itemIndex = 0;
   } else {
     itemIndex++;
@@ -59,7 +59,7 @@ function nextItem() {
 }
 function prevItem() {
   if (itemIndex === 0) {
-    itemIndex = totalPortofolioItem - 1;
+    itemIndex = totalsertificatesItem - 1;
   } else {
     itemIndex--;
   }
@@ -69,10 +69,10 @@ function toggleLightbox() {
   lightbox.classList.toggle('open');
 }
 function changeItem() {
-  imgSrc = portofolioItems[itemIndex].querySelector('.portofolio-img img').getAttribute('src');
+  imgSrc = sertificatesItems[itemIndex].querySelector('.sertificates-img img').getAttribute('src');
   lightboxImg.src = imgSrc;
-  lightboxText.innerHTML = portofolioItems[itemIndex].querySelector('h4').innerHTML;
-  lightboxCounter.innerHTML = itemIndex + 1 + ' of ' + totalPortofolioItem;
+  lightboxText.innerHTML = sertificatesItems[itemIndex].querySelector('h4').innerHTML;
+  lightboxCounter.innerHTML = itemIndex + 1 + ' of ' + totalsertificatesItem;
 }
 // close lightbox
 lightbox.addEventListener('click', function (event) {
