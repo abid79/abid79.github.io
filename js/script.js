@@ -10,6 +10,7 @@ const filterContainer = document.querySelector('.sertificates-filter'),
   totalFilterBtn = filterBtns.length,
   sertificatesItems = document.querySelectorAll('.sertificates-item '),
   totalsertificatesItem = sertificatesItems.length;
+console.log(filterBtns);
 // console.log(totalsertificatesItem);
 
 for (let i = 0; i < totalFilterBtn; i++) {
