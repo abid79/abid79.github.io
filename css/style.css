@@ -737,9 +737,12 @@ select {
   padding-bottom: 40px;
 }
 .portofolio .portofolio-item {
+  -ms-flex: 0 0 33.33%;
   flex: 0 0 33.33%;
   max-width: 33.33%;
   margin-bottom: 30px;
+  display: -ms-flexbox;
+  display: flex;
 }
 .portofolio .portofolio-item-inner {
   border-radius: 10px;
@@ -1062,7 +1065,8 @@ body.dark .shadow-dark {
 }
 @media (max-width: 991px) {
   .service .service-item,
-  .sertificates .sertificates-item {
+  .sertificates .sertificates-item,
+  .portofolio .portofolio-item {
     -ms-flex: 0 0 50%;
     flex: 0 0 50%;
     max-width: 50%;
@@ -1085,7 +1089,8 @@ body.dark .shadow-dark {
 }
 @media (max-width: 575px) {
   .contact .contact-info-item,
-  .sertificates .sertificates-item {
+  .sertificates .sertificates-item,
+  .portofolio .portofolio-item {
     -ms-flex: 0 0 100%;
     flex: 0 0 100%;
     max-width: 100%;
